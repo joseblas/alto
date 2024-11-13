@@ -1,0 +1,149 @@
+/**********************************************
++Running test: testGroupArrivalAndSeating()
+iTables: [Table{size=2, occupiedSeats=0}, Table{size=4, occupiedSeats=0}, Table{size=6, occupiedSeats=0}]
+$Group arrived: ClientsGroup{size=6}
+/Group seated immediately: ClientsGroup{size=6}
+$Group arrived: ClientsGroup{size=4}
+/Group seated immediately: ClientsGroup{size=4}
+$Group arrived: ClientsGroup{size=2}
+/Group seated immediately: ClientsGroup{size=2}
+/**********************************************
+Running test: testOnLeave()
+iTables: [Table{size=2, occupiedSeats=0}, Table{size=4, occupiedSeats=0}, Table{size=6, occupiedSeats=0}]
+$Group arrived: ClientsGroup{size=2}
+/Group seated immediately: ClientsGroup{size=2}
+$Group arrived: ClientsGroup{size=6}
++Group added to queue: ClientsGroup{size=6}
+$Group leaving: ClientsGroup{size=2}
+SGroup left and table released: Table{size=2, occupiedSeats=0} ClientsGroup{size=2}
+$Group leaving: ClientsGroup{size=6}
++Group left the queue: ClientsGroup{size=6}
+/**********************************************
+)Running test: partyGoToEmptyTableFirst()
+iTables: [Table{size=2, occupiedSeats=0}, Table{size=4, occupiedSeats=0}, Table{size=6, occupiedSeats=0}]
+$Group arrived: ClientsGroup{size=2}
+/Group seated immediately: ClientsGroup{size=2}
+/**********************************************
+!Running test: fourChairProblem()
+iTables: [Table{size=2, occupiedSeats=0}, Table{size=4, occupiedSeats=0}, Table{size=6, occupiedSeats=0}]
+$Group arrived: ClientsGroup{size=2}
+/Group seated immediately: ClientsGroup{size=2}
+$Group arrived: ClientsGroup{size=2}
+/Group seated immediately: ClientsGroup{size=2}
+/**********************************************
+1Running test: accomodateTwoPartiesAfterOneLeft()
+iTables: [Table{size=2, occupiedSeats=0}, Table{size=4, occupiedSeats=0}, Table{size=6, occupiedSeats=0}]
+$Group arrived: ClientsGroup{size=6}
+/Group seated immediately: ClientsGroup{size=6}
+$Group arrived: ClientsGroup{size=4}
+/Group seated immediately: ClientsGroup{size=4}
+$Group arrived: ClientsGroup{size=2}
+/Group seated immediately: ClientsGroup{size=2}
+$Group arrived: ClientsGroup{size=2}
++Group added to queue: ClientsGroup{size=2}
+$Group arrived: ClientsGroup{size=2}
++Group added to queue: ClientsGroup{size=2}
+$Group arrived: ClientsGroup{size=3}
++Group added to queue: ClientsGroup{size=3}
+$Group arrived: ClientsGroup{size=2}
++Group added to queue: ClientsGroup{size=2}
+$Group leaving: ClientsGroup{size=6}
+SGroup left and table released: Table{size=6, occupiedSeats=0} ClientsGroup{size=6}
+(Seated from queue: ClientsGroup{size=2}
+(Seated from queue: ClientsGroup{size=2}
+(Seated from queue: ClientsGroup{size=2}
+/**********************************************
+1Running test: testConcurrencyAndRaceConditions()
+iTables: [Table{size=2, occupiedSeats=0}, Table{size=4, occupiedSeats=0}, Table{size=6, occupiedSeats=0}]
+$Group arrived: ClientsGroup{size=2}
+/Group seated immediately: ClientsGroup{size=2}
+$Group arrived: ClientsGroup{size=3}
+/Group seated immediately: ClientsGroup{size=3}
+$Group arrived: ClientsGroup{size=4}
+/Group seated immediately: ClientsGroup{size=4}
+$Group arrived: ClientsGroup{size=6}
+/Group seated immediately: ClientsGroup{size=6}
+$Group arrived: ClientsGroup{size=2}
+/Group seated immediately: ClientsGroup{size=2}
+$Group leaving: ClientsGroup{size=4}
+SGroup left and table released: Table{size=4, occupiedSeats=0} ClientsGroup{size=4}
+$Group arrived: ClientsGroup{size=5}
++Group added to queue: ClientsGroup{size=5}
+$Group leaving: ClientsGroup{size=6}
+SGroup left and table released: Table{size=6, occupiedSeats=0} ClientsGroup{size=6}
+(Seated from queue: ClientsGroup{size=5}
+/**********************************************
+/Running test: testEdgeCaseEmptyQueueHandling()
+iTables: [Table{size=2, occupiedSeats=0}, Table{size=4, occupiedSeats=0}, Table{size=6, occupiedSeats=0}]
+	/**********************************************
+	5Running test: partyInQueueIsAssignedInArrivalOrder()
+	iTables: [Table{size=2, occupiedSeats=0}, Table{size=4, occupiedSeats=0}, Table{size=6, occupiedSeats=0}]
+	$Group arrived: ClientsGroup{size=6}
+	/Group seated immediately: ClientsGroup{size=6}
+	$Group arrived: ClientsGroup{size=6}
+	+Group added to queue: ClientsGroup{size=6}
+	$Group arrived: ClientsGroup{size=4}
+	/Group seated immediately: ClientsGroup{size=4}
+	$Group arrived: ClientsGroup{size=4}
+	+Group added to queue: ClientsGroup{size=4}
+	$Group arrived: ClientsGroup{size=4}
+	+Group added to queue: ClientsGroup{size=4}
+	$Group arrived: ClientsGroup{size=6}
+	+Group added to queue: ClientsGroup{size=6}
+	$Group leaving: ClientsGroup{size=4}
+	SGroup left and table released: Table{size=4, occupiedSeats=0} ClientsGroup{size=4}
+	(Seated from queue: ClientsGroup{size=4}
+	$Group leaving: ClientsGroup{size=6}
+	SGroup left and table released: Table{size=6, occupiedSeats=0} ClientsGroup{size=6}
+	(Seated from queue: ClientsGroup{size=6}
+
+/**********************************************
+
+"Running test: testSharingTables()
+
+iTables: [Table{size=2, occupiedSeats=0}, Table{size=4, occupiedSeats=0}, Table{size=6, occupiedSeats=0}]
+
+$Group arrived: ClientsGroup{size=2}
+
+/Group seated immediately: ClientsGroup{size=2}
+
+$Group arrived: ClientsGroup{size=2}
+
+/Group seated immediately: ClientsGroup{size=2}
+
+$Group arrived: ClientsGroup{size=2}
+
+/Group seated immediately: ClientsGroup{size=2}
+
+$Group arrived: ClientsGroup{size=6}
+
++Group added to queue: ClientsGroup{size=6}
+/**********************************************
+!Running test: partyLargerThan6()
+iTables: [Table{size=2, occupiedSeats=0}, Table{size=4, occupiedSeats=0}, Table{size=6, occupiedSeats=0}]
+/**********************************************
+1Running test: testOnArriveMorePartiesAndLookup()
+iTables: [Table{size=2, occupiedSeats=0}, Table{size=4, occupiedSeats=0}, Table{size=6, occupiedSeats=0}]
+$Group arrived: ClientsGroup{size=2}
+/Group seated immediately: ClientsGroup{size=2}
+$Group arrived: ClientsGroup{size=5}
+/Group seated immediately: ClientsGroup{size=5}
+$Group arrived: ClientsGroup{size=6}
++Group added to queue: ClientsGroup{size=6}
+$Group leaving: ClientsGroup{size=5}
+SGroup left and table released: Table{size=6, occupiedSeats=0} ClientsGroup{size=5}
+(Seated from queue: ClientsGroup{size=6}
+/**********************************************
+!Running test: partyNotAssigned()
+iTables: [Table{size=2, occupiedSeats=0}, Table{size=4, occupiedSeats=0}, Table{size=6, occupiedSeats=0}]
+$Group arrived: ClientsGroup{size=6}
+/Group seated immediately: ClientsGroup{size=6}
+$Group arrived: ClientsGroup{size=6}
++Group added to queue: ClientsGroup{size=6}
+$Group leaving: ClientsGroup{size=6}
+SGroup left and table released: Table{size=6, occupiedSeats=0} ClientsGroup{size=6}
+(Seated from queue: ClientsGroup{size=6}
+/**********************************************
+.Running test: leavePartyOf2ThatNeverArrived()
+iTables: [Table{size=2, occupiedSeats=0}, Table{size=4, occupiedSeats=0}, Table{size=6, occupiedSeats=0}]
+$Group leaving: ClientsGroup{size=2}
